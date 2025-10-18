@@ -36,15 +36,15 @@ const Hero = () => {
 
         <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700">
           <div>
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">10K+</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">250K+</div>
             <div className="text-sm text-muted-foreground">Images Generated</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">5K+</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">50K+</div>
             <div className="text-sm text-muted-foreground">Active Users</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">99%</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">98%</div>
             <div className="text-sm text-muted-foreground">Satisfaction</div>
           </div>
         </div>

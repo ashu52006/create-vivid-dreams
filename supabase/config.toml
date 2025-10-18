@@ -1,0 +1,10 @@
+project_id = "nwgcdcojalorlggklqgw"
+
+[functions.generate-image]
+verify_jwt = false
+
+[functions.faceswap]
+verify_jwt = false
+
+[functions.upscale-image]
+verify_jwt = false

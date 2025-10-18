@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Image, Users, ArrowUpCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import toolTextToImage from "@/assets/tool-text-to-image.jpg";
 import toolFaceSwap from "@/assets/tool-faceswap.jpg";
 import toolUpscaler from "@/assets/tool-upscaler.jpg";
@@ -10,22 +12,27 @@ const tools = [
     title: "Text-to-Image Generation",
     description: "Transform your ideas into stunning visuals with high-fidelity AI generation.",
     image: toolTextToImage,
+    path: "/text-to-image",
   },
   {
     icon: Users,
     title: "Identity Preservation & FaceSwap",
     description: "Seamlessly swap faces while maintaining identity and natural appearance.",
     image: toolFaceSwap,
+    path: "/faceswap",
   },
   {
     icon: ArrowUpCircle,
     title: "Image Upscaler & Restoration",
     description: "Enhance resolution and restore quality with advanced AI upscaling.",
     image: toolUpscaler,
+    path: "/upscaler",
   },
 ];
 
 const ToolsShowcase = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
@@ -43,6 +50,7 @@ const ToolsShowcase = () => {
             <Card
               key={index}
               className="group relative overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-primary cursor-pointer"
+              onClick={() => navigate(tool.path)}
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -59,7 +67,10 @@ const ToolsShowcase = () => {
                   </div>
                   <h3 className="text-xl font-bold">{tool.title}</h3>
                 </div>
-                <p className="text-muted-foreground">{tool.description}</p>
+                <p className="text-muted-foreground mb-4">{tool.description}</p>
+                <Button variant="hero" className="w-full">
+                  Try Now
+                </Button>
               </div>
 
               {/* Hover gradient overlay */}
